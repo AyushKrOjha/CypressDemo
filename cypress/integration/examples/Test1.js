@@ -1,7 +1,7 @@
 describe('My First Test Suite', function(){
 it('My First Test Case', function(){
 
-cy.visit("https://geekyants.com/");
+cy.visit("https://www.google.com");
 
 })
 
