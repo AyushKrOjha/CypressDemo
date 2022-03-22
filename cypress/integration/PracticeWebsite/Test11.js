@@ -1,8 +1,9 @@
 /// <reference types="cypress" />
-import HomePage from '../PageObject/HomePage'
-import ProductPage from '../PageObject/ProductPage'
-import InvoicePage from '../PageObject/InvoicePage'
-import PurchasePage from '../PageObject/PurchasePage'
+import HomePage from '../../support/PageObject/HomePage'
+import ProductPage from '../../support/PageObject/ProductPage'
+import InvoicePage from '../../support/PageObject/InvoicePage'
+import PurchasePage from '../../support/PageObject/PurchasePage'
+import cypress from 'cypress'
 //import cypress from 'cypress'
 
 describe("Adding From Table",function(){
@@ -17,7 +18,7 @@ describe("Adding From Table",function(){
         const productPage = new ProductPage()
         const invoicePage = new InvoicePage()
         const purchasePage = new PurchasePage()
-        cy.visit('https://rahulshettyacademy.com/angularpractice/');
+        cy.visit(Cypress.env('url')+"/angularpractice/");
         homePage.getShopButton().click();
         this.data.productName.forEach(function(element) {
             cy.selectProduct(element);

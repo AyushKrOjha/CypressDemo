@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
-import HomePage from '../PageObject/HomePage'
-import ProductPage from '../PageObject/ProductPage'
-import InvoicePage from '../PageObject/InvoicePage'
-import PurchasePage from '../PageObject/PurchasePage'
-import cypress from 'cypress'
+import HomePage from '../../support/PageObject/HomePage'
+import ProductPage from '../../support/PageObject/ProductPage'
+import InvoicePage from '../../support/PageObject/InvoicePage'
+import PurchasePage from '../../support/PageObject/PurchasePage'
+//import cypress from 'cypress'
 
 describe("Two Way Data Binding",function(){
     before(function(){
@@ -12,12 +12,12 @@ describe("Two Way Data Binding",function(){
         })
     })
     it("Two Way text Fiels",function(){
-        Cypress.config('defaultCommandTimeout',8000)
+        
         const homePage = new HomePage()
         const productPage = new ProductPage()
         const invoicePage = new InvoicePage()
         const purchasePage = new PurchasePage()
-        cy.visit('https://rahulshettyacademy.com/angularpractice/');
+        cy.visit(Cypress.env('url')+"/angularpractice/");
         homePage.getNameTextBox().type(this.data.name0);
         homePage.getTwoWayTextBox().should('have.value',this.data.name0);
         homePage.getEenterpreneurCheckbox().should('be.disabled');
@@ -37,6 +37,7 @@ describe("Two Way Data Binding",function(){
         //})
         invoicePage.getCheckoutButton().click();
         purchasePage.getCountryTextBox().type("India");
+        //Cypress.config('defaultCommandTimeout', 8000)
         purchasePage.getSuggestion().click();
         purchasePage.getTearmsCheckbox().click();
         purchasePage.getPurchaseButton().click();

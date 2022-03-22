@@ -2,7 +2,7 @@
 
 describe('Second Test Suit',function(){
     it('Placing order',function(){
-        cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
+        cy.visit(Cypress.env('url')+"/seleniumPractise/#/")
         cy.get(".products").find(".product").each(($el, index, $list) => {
             const reqText = $el.find('h4.product-name').text();
 

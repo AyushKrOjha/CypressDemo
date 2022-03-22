@@ -2,7 +2,7 @@
 
 describe('Practice Website Alerts',function(){
     it('Handeling Alerts',function(){
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+        cy.visit(Cypress.env('url')+"/AutomationPractice/")
         cy.get('#alertbtn').click();
         cy.get('#confirmbtn').click();
         //window alert

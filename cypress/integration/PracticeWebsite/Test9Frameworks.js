@@ -7,7 +7,7 @@ describe("Framework Concepts", function(){
         })
     })
     it("Hooks", function(){
-        cy.visit('https://rahulshettyacademy.com/angularpractice/');
+        cy.visit(Cypress.env('url')+"/angularpractice/")
         cy.get(".form-group:first-child input").type(this.data.name);
         cy.get("#exampleFormControlSelect1").select(this.data.gender).should('have.value','Male');
     })
