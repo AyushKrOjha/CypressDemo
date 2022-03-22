@@ -39,7 +39,7 @@ describe("Two Way Data Binding",function(){
         purchasePage.getCountryTextBox().type("India");
         //Cypress.config('defaultCommandTimeout', 8000)
         purchasePage.getSuggestion().click();
-        purchasePage.getTearmsCheckbox().click();
+        purchasePage.getTearmsCheckbox().click({force: true});
         purchasePage.getPurchaseButton().click();
         purchasePage.getAlert().should('have.text',"Success!");
     })
