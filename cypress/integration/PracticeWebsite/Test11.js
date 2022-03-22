@@ -3,8 +3,6 @@ import HomePage from '../../support/PageObject/HomePage'
 import ProductPage from '../../support/PageObject/ProductPage'
 import InvoicePage from '../../support/PageObject/InvoicePage'
 import PurchasePage from '../../support/PageObject/PurchasePage'
-import cypress from 'cypress'
-//import cypress from 'cypress'
 
 describe("Adding From Table",function(){
     before(function(){
