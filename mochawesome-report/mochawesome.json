@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-23T07:11:40.928Z",
+    "end": "2022-03-23T07:12:01.389Z",
+    "duration": 20461,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7cf81f13-3342-4f2d-8753-2842a99658a0",
+      "title": "",
+      "fullFile": "cypress/integration/PracticeWebsite/Test10Fixturesthree.js",
+      "file": "cypress/integration/PracticeWebsite/Test10Fixturesthree.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a6575416-8480-491c-be19-c2420d338642",
+          "title": "Two Way Data Binding",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Two Way text Fiels",
+              "fullTitle": "Two Way Data Binding Two Way text Fiels",
+              "timedOut": null,
+              "duration": 16409,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new _HomePage.default();\nconst productPage = new _ProductPage.default();\nconst invoicePage = new _InvoicePage.default();\nconst purchasePage = new _PurchasePage.default();\ncy.visit(Cypress.env('url') + \"/angularpractice/\");\nhomePage.getNameTextBox().type(this.data.name0);\nhomePage.getTwoWayTextBox().should('have.value', this.data.name0);\nhomePage.getEenterpreneurCheckbox().should('be.disabled');\nhomePage.getNameTextBox().clear().type(this.data.name1);\nhomePage.getNameTextBox().should('have.attr', 'minlength', '2'); //cy.get(\".form-group:first-child input\").then(function(el){\n//    var min = el.prop('minlength');\n//    expect(min).to.equals('2');\n//})\nhomePage.getShopButton().click();\nthis.data.productName.forEach(function (element) {\n  cy.selectProduct(element);\n});\nproductPage.getCheckoutButton().click(); //cy.get('td:nth-Child(4) strong').each((el, index, $list)=>{\n//    el.text()\n//})\ninvoicePage.getCheckoutButton().click();\npurchasePage.getCountryTextBox().type(\"India\"); //Cypress.config('defaultCommandTimeout', 8000)\npurchasePage.getSuggestion().click();\npurchasePage.getTearmsCheckbox().click({\n  force: true\n});\npurchasePage.getPurchaseButton().click();\npurchasePage.getAlert().should('have.text', \"Success!\");",
+              "err": {},
+              "uuid": "62d62f5a-c423-4415-bf15-f2879e8b80ad",
+              "parentUUID": "a6575416-8480-491c-be19-c2420d338642",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "62d62f5a-c423-4415-bf15-f2879e8b80ad"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16409,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.1.1"
+    }
+  }
+}
