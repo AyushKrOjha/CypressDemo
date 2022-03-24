@@ -4,5 +4,6 @@
   "env": {
     "url": "https://rahulshettyacademy.com"
   },
+  "testFiles": "**/*.feature",
   "projectId": "w61fco"
 }

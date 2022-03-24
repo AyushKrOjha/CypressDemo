@@ -10,10 +10,14 @@
     "dashboardtest": "npm run test -- --record --key c2265cfd-6e9f-4f84-b941-c4beb4f6595b --reporter mochawesome",
     "examplestest": "npm run test -- --spec \"cypress/integration/examples/*\" "
   },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^9.5.2",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-iframe": "^1.0.1",
     "mocha": "^9.2.2",
     "mochawesome": "^7.1.2"
