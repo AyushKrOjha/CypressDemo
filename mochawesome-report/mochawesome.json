@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-03-23T09:34:43.054Z",
-    "end": "2022-03-23T09:35:00.411Z",
-    "duration": 17357,
+    "start": "2022-03-24T06:19:40.810Z",
+    "end": "2022-03-24T06:19:53.137Z",
+    "duration": 12327,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b9659780-c6fd-47c4-8c25-ef48c6a29550",
+      "uuid": "657a5560-6ce3-4244-bfac-6acf084b9619",
       "title": "",
       "fullFile": "cypress/integration/examples/Test1.js",
       "file": "cypress/integration/examples/Test1.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e702ff48-dede-4a29-a6e4-7a7bd3796e6d",
+          "uuid": "6cb888ab-c491-4afb-b18e-fe22d44fe2c9",
           "title": "My First Test Suite",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "My First Test Case",
               "fullTitle": "My First Test Suite My First Test Case",
               "timedOut": null,
-              "duration": 12618,
+              "duration": 9536,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit(\"https://topgeek.io/\");\ncy.wait(4000);\ncy.get('.css-79wky').click();\ncy.get(\"div[type='Full Time']\").should('have.length', 7);",
               "err": {},
-              "uuid": "3f654b58-2c96-4c11-ba2b-fcd6580d34f4",
-              "parentUUID": "e702ff48-dede-4a29-a6e4-7a7bd3796e6d",
+              "uuid": "c3d250e7-effe-4627-afb8-3d8d6210fa28",
+              "parentUUID": "6cb888ab-c491-4afb-b18e-fe22d44fe2c9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3f654b58-2c96-4c11-ba2b-fcd6580d34f4"
+            "c3d250e7-effe-4627-afb8-3d8d6210fa28"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12618,
+          "duration": 9536,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
