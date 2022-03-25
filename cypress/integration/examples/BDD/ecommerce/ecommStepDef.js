@@ -8,6 +8,7 @@ const homePage = new HomePage()
 const productPage = new ProductPage()
 const invoicePage = new InvoicePage()
 const purchasePage = new PurchasePage()
+let name
 
 Given('I open Ecommerce page',function(){
     cy.visit(Cypress.env('url')+"/angularpractice/")
@@ -46,3 +47,19 @@ Then('select the country submit and verify thankyou',()=>{
         purchasePage.getPurchaseButton().click();
         purchasePage.getAlert().should('have.text',"Success!");
 })
+//When I fill the form detaails 
+When('I fill the form detaails',function(dataTable){
+    name = dataTable.rawTable[1][0];
+    homePage.getNameTextBox().type(dataTable.rawTable[1][0]);
+    homePage.getGenderDropdown().type(dataTable.rawTable[1][1]);
+})
+//Then validate the form behaviour
+Then('validate the form behaviour',function(){
+    homePage.getEenterpreneurCheckbox().should('be.disabled');
+    homePage.getNameTextBox().should('have.attr','minlength','2');
+    homePage.getTwoWayTextBox().should('have.value',name)
+})
+//And select the shop page
+And('select the shop page',function(){
+    homePage.getShopButton().click();
+}) 
