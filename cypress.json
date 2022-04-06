@@ -5,6 +5,6 @@
     "url": "https://rahulshettyacademy.com",
     "TAGS": "not @ignore"
   },
-  "testFiles": "**/*.feature",
+  "//testFiles": "**/*.feature",
   "projectId": "w61fco"
 }
